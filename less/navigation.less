@@ -1,1 +1,52 @@
 // Navigation Styles here
+.nav-wrapper{
+    width:100%;
+    padding:1.5% 0;
+    border-bottom: 2px dashed @navigation-border;
+
+    &:hover{
+        .keyframes(testanim, 2s);
+    }
+
+    .top-nav-container{
+        width:100%;
+        display:flex;
+
+        @media @mobile{
+            flex-wrap:wrap;
+        }
+    
+        .site-name-container{
+            width:55%;
+
+            @media @mobile{
+                width:100%;
+                text-align:center;
+                padding:4% 0 2% 0;
+            }
+        }
+        .nav-links{
+            width:45%;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+
+            @media @mobile{
+                width:100%;
+            }
+
+            a{
+                text-decoration:none;
+                color:@font-color;
+                font-family:'Roboto', sans-serif;
+                font-size:1.6rem;
+            }
+        }
+    }
+}
+
+@keyframes testanim {
+    0% {background-color:@main-bg;}
+    50% {background-color:@eastern-blue;}
+    100% {background-color:@main-bg;}
+}
